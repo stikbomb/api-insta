@@ -7,7 +7,7 @@
 - Скачайте код
 - Установите зависимости командой `pip install -r requirements.txt`
 - Добавьте переменные окружения (смотри пункт "Переменные окружения")
-- Запустите скрипт командой `python3 script%name args`
+- Запустите скрипт командой `python3 main.py script%name args`
 
 ## Переменные окружения
 
@@ -17,34 +17,30 @@
 - `INSTA_LOGIN` — логин в Instagram
 - `INSTA_PASSWORD` - пароль в Instagram
 
-### Пример запуска fetch_hubble.py
+### Пример запуска 'fetch hubble'
 ```
-$ python3 fetch_hubble.py url --filename='my_filename' --path='my_path'
+$ python3 main.py fh -u URL -p PATH
 ```
-url - обязательный аргумент вида `http://hubblesite.org/api/v3/image/200`. [Ссылка на API Hubble](http://hubblesite.org/api/documentation)
+-u - обязательный аргумент вида `http://hubblesite.org/api/v3/image/200`. [Ссылка на API Hubble](http://hubblesite.org/api/documentation)
 
---filename - маска имени сохраняемого файла. Необязательный аргумент, по умолчанию - `'hubble'`.
-
---path - путь к сохраняемым файлам. Наобязательный аргумент, по умолчанию - `'./images/'`
+-p - путь к сохраняемым файлам. Наобязательный аргумент, по умолчанию - `'./images/'`
 
 
-### Пример запуска fetch_spacex.py
+### Пример запуска 'fetch spacex'
 ```
-$ python3 fetch_spacex.py url --filename='my_filename' --path='my_path'
+$ python3 main.py fs -u URL -p PATH
 ```
-url - обязательный аргумент вида `https://api.spacexdata.com/v3/launches/77`. [Ссылка на API SpaceX](https://github.com/r-spacex/SpaceX-API)
+-u - обязательный аргумент вида `https://api.spacexdata.com/v3/launches/77`. [Ссылка на API SpaceX](https://github.com/r-spacex/SpaceX-API)
 
---filename - маска имени сохраняемых файлов. Необязательный аргумент, по умолчанию - `'spacex'`.
+-p - путь к сохраняемым файлам. Наобязательный аргумент, по умолчанию - `'./images/'`
 
---path - путь к сохраняемым файлам. Наобязательный аргумент, по умолчанию - `'./images/'`
-
-### Пример запуска publish_to_instagramm.py
+### Пример запуска 'publish to instagram'
 
 ```
-$ python3 publish_to_instagram.py --path='my_path'
+$ python3 main.py pti -p PATH
 ```
 
---path - путь к файлам для публикации в Instagram. Необязательный аргумент, по умолчанию - `'./images/'`
+-p - путь к файлам для публикации в Instagram. Необязательный аргумент, по умолчанию - `'./images/'`
 
 Таймаут публикации фотографий в Instagram составляет 90 секунд в целях защиты от бана за автопостинг.
 
